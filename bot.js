@@ -38,7 +38,7 @@ client.on("messageCreate", async (Interaction) => {
   const command = client.commands.get(commandRequest);
   //on interaction attempt to execute command
   try {
-    if (commandRequest == "play") {
+    if (commandRequest == "play" || commandRequest == "stop") {
       await command.execute(client, Interaction, args, player);
     } else {
       await command.execute(client, Interaction, args);
@@ -50,7 +50,6 @@ client.on("messageCreate", async (Interaction) => {
     });
   }
 });
-
 //once player starts playing trigger
 player.on("trackStart", (queue, track) => {
   queue.metadata.channel.send({
