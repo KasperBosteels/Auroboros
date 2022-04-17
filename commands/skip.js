@@ -1,7 +1,6 @@
-const { Message } = require("discord.js");
 module.exports = {
-  name: "stop",
-  help: "Ssstops the player",
+  name: "skip",
+  help: "SSskipsss the current song",
   arguments: " ",
   async execute(client, interaction, args, Player) {
     if (!interaction.member.voice.channelId)
@@ -18,7 +17,5 @@ module.exports = {
         content: "We are not in the Ssssame voice channel.",
         ephemeral: true,
       });
-    Player.deleteQueue(interaction.guild);
-    return await interaction.reply({ content: "SSssstopped the player." });
   },
 };

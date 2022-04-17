@@ -21,14 +21,14 @@ const commandFiles = fs
 //load commands into collection
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
-  client.commands.set(command.data.name, command);
-  console.log(`${command.data.name} file loaded.`);
+  client.commands.set(command.name, command);
+  console.log(`${command.name} file loaded.`);
 }
-
-//once bot ready to receive commands send log
-client.once("ready", () => {
-  console.log("𓆙 SSsssslithering into your SSssserver 𓆙");
-});
+player//once bot ready to receive commands send log
+.client
+  .once("ready", () => {
+    console.log("𓆙 SSsssslithering into your SSssserver 𓆙");
+  });
 
 client.on("messageCreate", async (Interaction) => {
   if (Interaction.author.bot || !Interaction.content.startsWith("ss")) return;

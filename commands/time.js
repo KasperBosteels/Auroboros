@@ -1,6 +1,6 @@
 module.exports = {
-  data: {
-    name: "time",
-  },
+  name: "time",
+  help: "time WIP",
+  arguments: "yes",
   async execute(client, interaction, args) {},
 };

@@ -1,8 +1,8 @@
 const { Message } = require("discord.js");
 module.exports = {
-  data: {
-    name: "play",
-  },
+  name: "play",
+  help: "play MuSSssic",
+  arguments: "<youtube name>/<spotify link>/<soundcloud link>",
   async execute(client, interaction, args, Player) {
     if (!interaction.member.voice.channelId)
       return await interaction.reply({
